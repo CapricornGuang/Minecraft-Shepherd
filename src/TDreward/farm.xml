@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <About>
+    <Summary>Animal Hoarding</Summary>
+  </About>
+  <ServerSection>
+    <ServerInitialConditions>
+        <Time><StartTime>1</StartTime></Time>
+        <Weather>clear</Weather>
+    </ServerInitialConditions>
+    <ServerHandlers>
+      <FlatWorldGenerator generatorString="3;7,2*3,2;1;village"/>
+      <DrawingDecorator>
+        <!--Draw a 20x20 boundary-->
+        <DrawCuboid x1="-1"  y1="4" z1="-6"  x2="20" y2="4" z2="20" type="dark_oak_fence" />
+        <DrawCuboid x1="0"  y1="4" z1="-5"  x2="19" y2="4" z2="19" type="air" />
+
+
+        <!--Draw a 5x5 pen -->
+        <DrawLine x1="0"  y1="4" z1="-1"  x2="7" y2="4" z2="-1" type="fence" /> 
+        <DrawBlock x="7" y="4" z="-2 " type="fence" />
+        <DrawBlock x="7" y="4" z="-5 " type="fence" />
+        
+
+        <!--Spawn sheep inside the pen-->
+        <!-- <DrawEntity x="3" y="4" z="3" type="Sheep"/>
+        <DrawEntity x="4" y="4" z="4" type="Sheep"/> -->
+
+        <!--Spawn a wolf and some sheep outside the pen-->
+        <!-- <DrawEntity x="9" y="4" z="9" type="Wolf"/> -->
+        <DrawEntity x="19" y="4" z="20" type="Sheep"/>
+        <DrawEntity x="10" y="4" z="10" type="Sheep"/>
+        <DrawEntity x="15" y="4" z="5" type="Sheep"/>
+      </DrawingDecorator>
+
+      <ServerQuitFromTimeUp timeLimitMs="40000"/>
+      <ServerQuitWhenAnyAgentFinishes/>
+    </ServerHandlers>
+  </ServerSection>
+
+  <AgentSection mode="Survival">
+    <Name>Agnis</Name>
+    <AgentStart>
+      <Placement x="0.5" y="4" z="0.5" pitch="30" yaw="0"/>
+      <Inventory>
+        <InventoryItem slot="1" type="wheat" quantity="1"/>
+      </Inventory>
+    </AgentStart>
+    <AgentHandlers>
+      <DiscreteMovementCommands/>
+      <ObservationFromFullStats/>
+      <AbsoluteMovementCommands/>
+      <ContinuousMovementCommands turnSpeedDegs="480"/>
+      <InventoryCommands />
+      <RewardForSendingCommand reward="-1" />
+      <ObservationFromNearbyEntities>
+          <Range name="entities" xrange="40" yrange="40" zrange="40"/>
+      </ObservationFromNearbyEntities>
+      <MissionQuitCommands quitDescription="done"/>
+    </AgentHandlers>
+  </AgentSection>
+
+</Mission>
