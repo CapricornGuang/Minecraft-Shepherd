@@ -8,13 +8,23 @@ The goal of this task is to train the Agent to lure sheep into the circle with o
 
 This research is based on MalmoPython virtual experiment environment provided by MOJANG, and Minecraft carries out simulation experiments. The schematic diagram of our experimental environment is as follows
 
-![uTools_1641713915176](.img/uTools_1641713915176.png)
+<p align="center">
+<img src=".\.img/uTools_1641713915176.png" height = "320" alt="" align=center />
+<br><br>
+<b>Figure 1.</b> The illustration of Diviner framework.
+</p>
 
 ## How To Empoly DQN?
 
 We mainly use Q-learning algorithm to solve this problem. Through Q-learning, we learn the value of **seven actions** corresponding to each state, and select the action with the highest value among the seven actions to execute. After getting a new state feedback from the environment,we  make the next round of action selection, and so on.
-
-![uTools_1641713987925](.img/uTools_1641713987925.png)
-
-![uTools_1641714117158](.img/uTools_1641714117158.png)
+<p align="center">
+<img src=".\.img/uTools_1641713987925.png" height = "320" alt="" align=center />
+<br><br>
+<b>Figure 1.</b> The illustration of Diviner framework.
+</p>
+<p align="center">
+<img src=".\.img/uTools_1641714117158.png" height = "320" alt="" align=center />
+<br><br>
+<b>Figure 1.</b> The illustration of Diviner framework.
+</p>
 
