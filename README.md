@@ -11,7 +11,7 @@ This research is based on MalmoPython virtual experiment environment provided by
 <p align="center">
 <img src=".\.img/uTools_1641713915176.png" height = "200" alt="" align=center />
 <br><br>
-<b>Figure 1.</b> The illustration of Diviner framework.
+<b>Figure 1.</b> The illustration of DQN framework.
 </p>
 
 ## How To Empoly DQN?
