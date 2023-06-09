@@ -20,11 +20,11 @@ We mainly use Q-learning algorithm to solve this problem. Through Q-learning, we
 <p align="center">
 <img src=".\.img/uTools_1641713987925.png" height = "200" alt="" align=center />
 <br><br>
-<b>Figure 1.</b> The DQN framework.
+<b>Figure 1.</b> An illustration of the DQN framework.
 </p>
 <p align="center">
 <img src=".\.img/uTools_1641714117158.png" height = "200" alt="" align=center />
 <br><br>
-<b>Figure 1.</b> The illustration of Diviner framework.
+<b>Figure 1.</b> A summary for our reward system.
 </p>
 
